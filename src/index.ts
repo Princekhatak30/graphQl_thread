@@ -30,7 +30,7 @@ async function startServer() {
         getUser(id:ID!):User
         say(name:String): String
         }
-        `, // Resolver Or Actual func that will execute
+        `, // Resolver Or Actual func that will execute hello
         resolvers:{
 Todo :{
     user: async(todo:any) =>  (await axios.get(`https://jsonplaceholder.typicode.com/users/${todo.userId}`)).data
